@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Wokwi",
+  "editor": "Wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": -90.5,
+      "left": 105.1,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 15.6,
+      "left": -23.13,
+      "attrs": { "color": "red", "label": "Alarma PM2.5" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:D2", "led1:A", "green", [ "v0" ] ],
+    [ "esp:GND", "led1:C", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

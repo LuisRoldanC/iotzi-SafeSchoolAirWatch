@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Sensores IoTzi</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><span class="logo">🛡️</span> IoTzi SafeSchool AirWatch</h1>
+    </header>
+    
+    <div class="status-bar">
+        Estado de Conexión: <span id="status-conexion">Conectando...</span>
+    </div>
+
+    <main class="dashboard-grid">
+
+        <div class="sensor-card" id="card-temp">
+            <div class="card-header">
+                <span class="icon">🌡️</span>
+                <h3>Temperatura</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="temp-valor">--</p>
+                <p class="data-unit">°C</p>
+            </div>
+            <div class="card-footer" id="footer-temp">
+                <span class="status-dot"></span>
+                <span id="temp-estado">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-humedad">
+            <div class="card-header">
+                <span class="icon">💧</span>
+                <h3>Humedad</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="humedad-valor">--</p>
+                <p class="data-unit">% Humedad</p>
+            </div>
+            <div class="card-footer" id="footer-humedad">
+                <span class="status-dot"></span>
+                <span id="humedad-estado">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-indicec">
+            <div class="card-header">
+                <span class="icon">🥵</span>
+                <h3>Índice de Calor</h3>
+            </div>
+            <div class="card-body-split">
+                <div>
+                    <p class="main-data-small" id="indicec-temp">--</p>
+                    <p class="data-unit">°C Real</p>
+                </div>
+                <div>
+                    <p class="main-data-small" id="indicec-valor">--</p>
+                    <p class="data-unit">°C Sensación</p>
+                </div>
+            </div>
+            <div class="card-footer" id="footer-indicec">
+                <span class="status-dot"></span>
+                <span id="indicec-estado">Cargando...</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-viento">
+            <div class="card-header">
+                <span class="icon">🌬️</span>
+                <h3>Sensor de Viento</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="viento-valor">--</p>
+                <p class="data-unit">km/h</p>
+            </div>
+            <div class="card-footer" id="footer-viento">
+                <span id="viento-dir">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-pm25">
+            <div class="card-header">
+                <span class="icon">🌫️</span>
+                <h3>Sensor PM2.5</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="pm25-valor">--</p>
+                <p class="data-unit">µg/m³</p>
+            </div>
+            <div class="card-footer" id="footer-pm25">
+                <span class="status-dot"></span>
+                <span id="pm25-estado">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-co">
+            <div class="card-header">
+                <span class="icon">🏭</span>
+                <h3>Sensor de CO</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="co-valor">--</p>
+                <p class="data-unit">ppm</p>
+            </div>
+            <div class="card-footer" id="footer-co">
+                <span class="status-dot"></span>
+                <span id="co-estado">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-gas">
+            <div class="card-header">
+                <span class="icon">🔥</span>
+                <h3>Sensor de Gas</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="gas-valor">--</p>
+                <p class="data-unit">valor</p>
+            </div>
+            <div class="card-footer" id="footer-gas">
+                <span class="status-dot"></span>
+                <span id="gas-estado">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-humo">
+            <div class="card-header">
+                <span class="icon">💨</span>
+                <h3>Sensor de Humo</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="humo-valor">--</p>
+                <p class="data-unit">valor</p>
+            </div>
+            <div class="card-footer" id="footer-humo">
+                <span class="status-dot"></span>
+                <span id="humo-estado">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-do">
+            <div class="card-header">
+                <span class="icon">🫧</span>
+                <h3>Oxígeno Disuelto</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="do-valor">--</p>
+                <p class="data-unit">mg/L</p>
+            </div>
+            <div class="card-footer" id="footer-do">
+                <span class="status-dot"></span>
+                <span id="do-estado">Esperando...</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="card-ruido">
+            <div class="card-header">
+                <span class="icon">🔊</span>
+                <h3>Sensor de Ruido</h3>
+            </div>
+            <div class="card-body">
+                <p class="main-data" id="ruido-valor">--</p>
+                <p class="data-unit">dB</p>
+            </div>
+            <div class="card-footer" id="footer-ruido">
+                <span class="status-dot"></span>
+                <span id="ruido-estado">--</span>
+            </div>
+        </div>
+
+        <div class="sensor-card" id="map-card" style="grid-column: 1 / -1; height: 600px; padding: 0; overflow: hidden;">
+            <div id="map" style="width: 100%; height: 100%;"></div>
+        </div>
+
+    </main>
+
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
