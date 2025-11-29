@@ -95,22 +95,22 @@ Cada uno se encuentra en su propia carpeta dentro del repositorio.
 ### 5.1. Nodo 1 — Sensor de Oxígeno Disuelto (DO)
 - **Tópico:** `iotzi/escuela/sensor/do`  
 - **Descripción:** Simula un sensor DO para medir mg/L de oxígeno en agua (cisternas o laboratorios).
-- [🫧 Simulador de Sensor de Oxígeno Disuelto (DO) — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor_OxigenoDisuelto/readme.md)
+- [🫧 Simulador de Sensor de Oxígeno Disuelto (DO) — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor_OxigenoDisuelto/readme.md)
 
 ### 5.2. Nodo 2 — Sensor de Partículas PM2.5
 - **Tópico:** `iotzi/escuela/sensor/pm25`  
 - **Descripción:** Emulación basada en pulsos característicos de sensores de polvo fino.
-- [💨 Simulador de Sensor de Polvo PM2.5 (PPD42 — Documentación)](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20de%20Polvo/readme.md)
+- [💨 Simulador de Sensor de Polvo PM2.5 (PPD42 — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20de%20Polvo/readme.md).
 
 ### 5.3. Nodo 3 — Sensor de Gas (MQ-4 Metano)
 - **Tópico:** `iotzi/escuela/sensor/gas`  
 - **Descripción:** Simula sensor MQ-4. Usa lógica inversa: **valores bajos = peligro**.
-- [🧯 Simulador de Sensor de Gas MQ-4 — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20Gas/readme.md)
+- [🧯 Simulador de Sensor de Gas MQ-4 — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20Gas/readme.md).
 
 ### 5.4. Nodo 4 — Sensor de Humo (MQ-2)
 - **Tópico:** `iotzi/escuela/sensor/humo`  
 - **Descripción:** Simula sensor MQ-2 donde valores altos indican presencia de humo.
-- [🔥 Simulador de Sensor de Humo MQ-2 — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20Humo/readme.md)
+- [🔥 Simulador de Sensor de Humo MQ-2 — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20Humo/readme.md)
 
 ---
 
@@ -121,32 +121,32 @@ La plataforma **Pico W** opera 6 nodos adicionales, combinando sensores físicos
 ### 6.1. Nodo 5 — Sensor de Monóxido de Carbono (CO)
 - **Tópico:** `iotzi/escuela/sensor/co`  
 - **Descripción:** Simula niveles de CO con picos periódicos.
-- [🏭 Simulador del Sensor de Monóxido de Carbono (CO) — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20de%20Monoxido%20de%20carbono/readme.md)
+- [🏭 Simulador del Sensor de Monóxido de Carbono (CO) — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20de%20Monoxido%20de%20carbono/readme.md)
 
 ### 6.2. Nodo 6 — Sensor de Humedad (Físico)
 - **Tópico:** `iotzi/escuela/sensor/hum`  
 - **Descripción:** Lecturas reales del sensor **DHT11** en el pin GP15.
-- [📡 Sensor de Humedad (DHT11/DHT22) — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20de%20Humedad/readme.md)
+- [📡 Sensor de Humedad (DHT11/DHT22) — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20de%20Humedad/readme.md)
 
 ### 6.3. Nodo 7 — Índice de Calor (Derivado)
 - **Tópico:** `iotzi/escuela/sensor/IndiceC`  
 - **Descripción:** Calculado mediante fórmula Steadman-NWS usando temperatura + humedad reales.
-- [🔥 Sensor Simulador de Índice de Calor — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20de%20Indice%20de%20calor/readme.md)
+- [🔥 Sensor Simulador de Índice de Calor — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20de%20Indice%20de%20calor/readme.md)
 
 ### 6.4. Nodo 8 — Sensor de Ruido (Simulado)
 - **Tópico:** `iotzi/escuela/sensor/ruido`  
 - **Descripción:** Genera niveles acústicos normales y picos simulados.
-- [🔊 Simulador de Sensor de Ruido (Pico W) — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20de%20Ruido/readme.md)
+- [🔊 Simulador de Sensor de Ruido (Pico W) — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20de%20Ruido/readme.md)
 
 ### 6.5. Nodo 9 — Sensor de Temperatura (Físico)
 - **Tópico:** `iotzi/escuela/sensor/temp`  
 - **Descripción:** Lectura real desde DHT11 (variable temperatura).
-- [🌡️ Sensor de Temperatura (DHT11 – Pico W)— Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20de%20Temperatura/readme.md)
+- [🌡️ Sensor de Temperatura (DHT11 – Pico W)— Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20de%20Temperatura/readme.md)
 
 ### 6.6. Nodo 10 — Sensor de Viento (Simulado)
 - **Tópico:** `iotzi/escuela/sensor/vien`  
 - **Descripción:** Simula velocidad del viento y calcula dirección cardinal.
-- [🍃 Monitor de Velocidad y Dirección del Viento — Documentación](https://github.com/tectijuana/iotzi-LuisRoldanC/blob/main/Sensor%20de%20Viento/readme.md)
+- [🍃 Monitor de Velocidad y Dirección del Viento — Documentación](https://github.com/LuisRoldanC/iotzi-SafeSchoolAirWatch/blob/main/Sensor%20de%20Viento/readme.md)
 
 ---
 
